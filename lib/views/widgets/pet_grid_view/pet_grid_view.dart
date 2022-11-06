@@ -16,8 +16,8 @@ class PetGridView extends StatelessWidget {
     return Obx(
       () => GridView.builder(
         itemCount: pets.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 300,
           crossAxisSpacing: 10.0,
           mainAxisSpacing: 10.0,
         ),
@@ -56,9 +56,6 @@ class PetGridView extends StatelessWidget {
                       children: [
                         Text(
                           pets[index].name,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w500,
-                          ),
                         ),
                         const SizedBox(
                           width: 4,
