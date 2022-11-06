@@ -18,7 +18,7 @@ class PetGridView extends StatelessWidget {
         itemCount: pets.length,
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 300,
-          crossAxisSpacing: 10.0,
+          crossAxisSpacing: 40.0,
           mainAxisSpacing: 10.0,
         ),
         shrinkWrap: true,
@@ -55,7 +55,7 @@ class PetGridView extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          pets[index].name,
+                          '${pets[index].name} - ${pets[index].age} yrs',
                         ),
                         const SizedBox(
                           width: 4,

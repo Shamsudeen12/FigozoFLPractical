@@ -23,23 +23,47 @@ class LandingScreen extends StatelessWidget {
             builder: (context, constraints) {
               return Column(
                 children: [
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: TabBar(
-                      indicatorColor: const Color(0xFFcfb3cd),
-                      isScrollable: constraints.maxWidth >= Breakpoint.tablet
-                          ? true
-                          : false,
-                      tabs: [
-                        Tab(
-                          text: AppStrings.cats.toUpperCase(),
+                  (constraints.maxWidth >= Breakpoint.desktop)
+                      ? Row(
+                          children: [
+                            const SizedBox(
+                              width: 24,
+                            ),
+                            const Icon(Icons.catching_pokemon),
+                            const SizedBox(
+                              width: 24,
+                            ),
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: TabBar(
+                                indicatorColor: const Color(0xFFcfb3cd),
+                                isScrollable:
+                                    constraints.maxWidth >= Breakpoint.tablet
+                                        ? true
+                                        : false,
+                                tabs: [
+                                  Tab(
+                                    text: AppStrings.cats.toUpperCase(),
+                                  ),
+                                  Tab(
+                                    text: AppStrings.dogs.toUpperCase(),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        )
+                      : TabBar(
+                          indicatorColor: const Color(0xFFcfb3cd),
+                          tabs: [
+                            Tab(
+                              text: AppStrings.cats.toUpperCase(),
+                            ),
+                            Tab(
+                              text: AppStrings.dogs.toUpperCase(),
+                            ),
+                          ],
                         ),
-                        Tab(
-                          text: AppStrings.dogs.toUpperCase(),
-                        ),
-                      ],
-                    ),
-                  ),
                   Expanded(
                     child: Center(
                       child: SizedBox(

@@ -1,16 +1,11 @@
 # figozo_fl_practical
 
-A new Flutter project.
+Figozo Flutter Practical Assessment
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
+This repository contains the code for the Figozo Flutter Practical Assessment. The web and mobile versions of the application have been built. The app contains the following screens:
 
-A few resources to get you started if this is your first Flutter project:
+- A home page where the user can see lists of cats and dogs, with a small UI variant on the web version where the logo shows
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- A pet details page where the user can see details about the pet they clicked on. This includes the Age, Weight and Description of the pet
